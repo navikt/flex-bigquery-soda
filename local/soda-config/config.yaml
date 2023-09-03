@@ -1,0 +1,5 @@
+data_source flex_dataset:
+  type: bigquery
+  connection:
+    project_id: flex-prod-af40
+    dataset: flex_dataset

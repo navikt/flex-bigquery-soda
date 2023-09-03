@@ -1,0 +1,11 @@
+checks for flexjar_feedback_spinnsyn_view:
+  - row_count > 0:
+      name: "View skal ikke være tomt"
+  - freshness(opprettet) < 1d:
+      name: "Det er mottatt tilbakemeldinger siste døgn"
+
+checks for sykepengesoknad_sykepengesoknad_view:
+  - row_count > 0:
+      name: "View skal ikke være tomt"
+  - freshness(opprettet) < 1d:
+      name: "Det er mottatt sykepengesoknader siste døgn"
