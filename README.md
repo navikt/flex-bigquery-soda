@@ -18,3 +18,7 @@ make run-soda
 ## Avhengigheter
 
 - [Homebrew](https://brew.sh/)
+
+## Ressurser
+
+[List of SodaCL metrics and checks](https://docs.soda.io/soda-cl/metrics-and-checks.html#list-of-sodacl-metrics-and-checks)
