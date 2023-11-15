@@ -11,7 +11,7 @@ readme = "README.md"
 python = "^3.11"
 soda-core-bigquery = "^3.0.47"
 google-cloud-bigquery-storage = "^2.22.0"
-pyarrow = "^12.0.1"
+pyarrow = "^14.0.1"
 
 [build-system]
 requires = ["poetry-core"]
