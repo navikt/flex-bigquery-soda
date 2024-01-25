@@ -1,0 +1,4 @@
+gcp:
+  project_id: flex-prod-af40
+slack:
+  channel: "#flex-dev"

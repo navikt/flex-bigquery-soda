@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: soda-checks
+  namespace: flex
+data:
+  flex_dataset.yaml: |
+    checks for sykepengesoknad_sykepengesoknad_view:
+      - freshness(opprettet) < 1d:
+          name: "Det er mottatt sykepengesoknader siste døgn."
+
+    checks for soda-sendt-sykepengesoknad-avstemming:
+      - row_count = 0:
+          name: "Det skal ikke finnes søknader med status SENDT som ikke finnes i sykepengesoknad-arkivering-oppgave."
