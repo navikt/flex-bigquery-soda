@@ -1,6 +1,4 @@
 checks for sykepengesoknad_sykepengesoknad_view:
-  - row_count > 0:
-      name: "View skal ikke være tomt"
   - freshness(opprettet) < 1d:
       name: "Det er mottatt sykepengesoknader siste døgn"
 
