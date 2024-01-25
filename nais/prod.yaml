@@ -1,6 +1,6 @@
 gcp:
   project_id: flex-prod-af40
 cron:
-  schedule: '09 40 * * *'
+  schedule: '40 09 * * *'
 slack:
   channel: "#flex-dev"
