@@ -23,16 +23,3 @@ jobs:
           CLUSTER: prod-gcp
           RESOURCE: nais/soda-config.yaml,nais/soda-checks-prod.yaml,nais/naisjob.yaml
           VARS: nais/prod-run-once.yaml
-
-  deploy-prod-run-scheduled:
-    needs: [deploy-prod-run-once]
-    runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-    steps:
-      - uses: actions/checkout@v4
-      - uses: nais/deploy/actions/deploy@v2
-        env:
-          CLUSTER: prod-gcp
-          RESOURCE: nais/soda-config.yaml,nais/soda-checks-prod.yaml,nais/naisjob.yaml
-          VARS: nais/prod.yaml
