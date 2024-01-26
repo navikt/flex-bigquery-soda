@@ -1,5 +1,6 @@
 name: deploy-jobs
 on:
+  workflow_dispatch:
   push:
     branches:
       - 'main'
