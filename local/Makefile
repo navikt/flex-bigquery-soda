@@ -9,6 +9,6 @@ bootstrap:
 	@poetry --version || brew install poetry
 	poetry update
 
-soda-scan: bootstrap ## Autentiserer mot GCP og kjører Soda-sjekker.
+run-soda-checks: bootstrap ## Autentiserer mot GCP og kjører Soda-sjekker.
 	@gcloud --format=json auth list | jq --exit-status '.[] | select(.status == "ACTIVE")' || gcloud auth application-default login
 	poetry run python ./soda-scan.py
