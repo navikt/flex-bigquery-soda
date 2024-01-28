@@ -3,3 +3,10 @@ data_source flex_dataset:
   connection:
     project_id: flex-prod-af40
     dataset: flex_dataset
+
+data_source sykepengesoknad_datastream:
+  type: bigquery
+  connection:
+    project_id: flex-prod-af40
+    dataset: sykepengesoknad_datastream
+

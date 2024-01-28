@@ -8,3 +8,8 @@ data:
     checks for soda-sendt-sykepengesoknad-avstemming:
       - row_count = 0:
           name: "Det skal ikke finnes søknader med status SENDT som ikke finnes i sykepengesoknad-arkivering-oppgave."
+
+  sykepengesoknad_datastream.yaml: |
+    checks for public_sykepengesoknad:
+      - freshness(opprettet) < 12m:
+          name: "Det er ikke streamet sykepengesøknader til BigQuery siste 12 timer"

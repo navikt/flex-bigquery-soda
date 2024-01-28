@@ -1,0 +1,3 @@
+checks for public_sykepengesoknad:
+  - freshness(opprettet) < 12m:
+      name: "Det er ikke streamet sykepengesøknader til BigQuery siste 12 timer"
