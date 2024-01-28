@@ -11,5 +11,5 @@ data:
 
   sykepengesoknad_datastream.yaml: |
     checks for public_sykepengesoknad:
-      - freshness(opprettet) < 12m:
+      - freshness(opprettet) < 12h:
           name: "Det er ikke streamet sykepengesøknader til BigQuery siste 12 timer"
