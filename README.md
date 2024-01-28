@@ -12,7 +12,7 @@ Testene kjøres med:
 
 ```sh
 cd local
-make run-soda
+make run-soda-checks
 ```
 
 ## Avhengigheter
