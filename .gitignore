@@ -3,3 +3,4 @@
 .idea
 local/poetry.lock
 .python-version
+.DS_Store
