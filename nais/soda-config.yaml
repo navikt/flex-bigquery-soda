@@ -20,4 +20,9 @@ data:
       connection:
         project_id: {{ gcp.project_id }}
         dataset: spinnsyn_datastream
+    data_source arkivering_oppgave_datastream:
+      type: bigquery
+      connection:
+        project_id: {{ gcp.project_id }}
+        dataset: arkivering_oppgave_datastream
 

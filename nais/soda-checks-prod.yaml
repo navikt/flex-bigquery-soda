@@ -18,3 +18,8 @@ data:
     checks for public_vedtak_v2:
       - freshness(opprettet) < 12h:
           name: "Det er ikke streamet vedtak til BigQuery siste 12 timer"
+
+  arkivering_oppgave_datastream.yaml: |
+    checks for public_oppgavestyring:
+      - freshness(opprettet) < 12h:
+          name: "Det er ikke streamet oppgavestyring til BigQuery siste 12 timer"

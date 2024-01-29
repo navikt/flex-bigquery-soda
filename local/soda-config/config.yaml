@@ -15,3 +15,9 @@ data_source spinnsyn_datastream:
   connection:
     project_id: flex-prod-af40
     dataset: spinnsyn_datastream
+
+data_source arkivering_oppgave_datastream:
+  type: bigquery
+  connection:
+    project_id: flex-prod-af40
+    dataset: arkivering_oppgave_datastream
