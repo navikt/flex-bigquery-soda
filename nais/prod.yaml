@@ -3,4 +3,4 @@ gcp:
 cron:
   schedule: '45 9 * * 1-5'
 slack:
-  channel: "#flex-soda"
+  channel: "#spøkelser"

@@ -1,4 +1,4 @@
 gcp:
   project_id: flex-prod-af40
 slack:
-  channel: "#flex-soda"
+  channel: "#spøkelser"
