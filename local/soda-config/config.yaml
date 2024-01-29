@@ -10,3 +10,8 @@ data_source sykepengesoknad_datastream:
     project_id: flex-prod-af40
     dataset: sykepengesoknad_datastream
 
+data_source spinnsyn_datastream:
+  type: bigquery
+  connection:
+    project_id: flex-prod-af40
+    dataset: spinnsyn_datastream

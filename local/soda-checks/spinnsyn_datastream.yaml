@@ -1,0 +1,3 @@
+checks for public_vedtak_v2:
+  - freshness(opprettet) < 12h:
+      name: "Det er ikke streamet vedtak til BigQuery siste 12 timer"

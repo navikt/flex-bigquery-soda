@@ -15,4 +15,9 @@ data:
       connection:
         project_id: {{ gcp.project_id }}
         dataset: sykepengesoknad_datastream
+    data_source spinnsyn_datastream:
+      type: bigquery
+      connection:
+        project_id: {{ gcp.project_id }}
+        dataset: spinnsyn_datastream
 
