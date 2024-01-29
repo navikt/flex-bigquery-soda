@@ -15,6 +15,28 @@ cd local
 make run-soda-checks
 ```
 
+## Aksjoner
+
+Hvis noen av sjekkene som verifiser at det er streamet data til BigQuery feiler kan status på Datastreams sjekkes med:
+
+```
+# Sett flex-prod som prosjekt:
+> gcloud config set project flex-prod-af40
+
+# List datastreams:
+> gcloud datastream streams list --location=europe-north1 | tr -s ' ' | cut -d ' '  -f1,2
+
+modia-kontakt-metrikk-datastream RUNNING
+sykepengesoknad-datastream RUNNING
+flexjar-datastream RUNNING
+arkivering-oppgave-datastream RUNNING
+sak-status-metrikk-datastream RUNNING
+spinnsyn-datastream RUNNING
+
+# Restart Cloud SQL Proxy hvis noen av datastreamene har feilet:
+gcloud compute instances reset flex-datastream-cloud-sql-proxy-vm --zone=europe-north1-a
+```
+
 ## Avhengigheter
 
 - [Homebrew](https://brew.sh/)
