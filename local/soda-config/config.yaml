@@ -33,3 +33,9 @@ data_source modia_kontakt_metrikk_datastream:
   connection:
     project_id: flex-prod-af40
     dataset: modia_kontakt_metrikk_datastream
+
+data_source flexjar_datastream:
+  type: bigquery
+  connection:
+    project_id: flex-prod-af40
+    dataset: flexjar_datastream

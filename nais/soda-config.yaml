@@ -35,5 +35,10 @@ data:
       connection:
         project_id: {{ gcp.project_id }}
         dataset: modia_kontakt_metrikk_datastream
+    data_source flexjar_datastream:
+      type: bigquery
+      connection:
+        project_id: {{ gcp.project_id }}
+        dataset: flexjar_datastream
     
 
