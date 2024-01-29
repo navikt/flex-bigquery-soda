@@ -7,19 +7,19 @@ data:
   flex_dataset.yaml: |
     checks for soda-sendt-sykepengesoknad-avstemming:
       - row_count = 0:
-          name: "Det skal ikke finnes søknader med status SENDT som ikke finnes i sykepengesoknad-arkivering-oppgave."
+          name: "Det finnes sykepengesøknader med status SENDT som ikke finnes i sykepengesoknad-arkivering-oppgave"
 
   sykepengesoknad_datastream.yaml: |
     checks for public_sykepengesoknad:
       - freshness(opprettet) < 12h:
-          name: "Det er ikke streamet sykepengesøknader til BigQuery siste 12 timer"
+          name: "Det er ikke streamet data fra sykepengesoknad-backend til til BigQuery siste 12 timer"
 
   spinnsyn_datastream.yaml: |
     checks for public_vedtak_v2:
       - freshness(opprettet) < 12h:
-          name: "Det er ikke streamet vedtak til BigQuery siste 12 timer"
+          name: "Det er ikke streamet data fra spinnsyn-backend til til BigQuery siste 12 timer"
 
   arkivering_oppgave_datastream.yaml: |
     checks for public_oppgavestyring:
       - freshness(opprettet) < 12h:
-          name: "Det er ikke streamet oppgavestyring til BigQuery siste 12 timer"
+          name: "Det er ikke streamet data fra sykepengesoknad-arkivering-oppgave til til BigQuery siste 12 timer"
