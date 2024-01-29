@@ -25,4 +25,10 @@ data:
       connection:
         project_id: {{ gcp.project_id }}
         dataset: arkivering_oppgave_datastream
+    data_source sak_status_metrikk_datastream:
+      type: bigquery
+      connection:
+        project_id: {{ gcp.project_id }}
+        dataset: sak_status_metrikk_datastream
+    
 

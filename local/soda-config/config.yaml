@@ -21,3 +21,9 @@ data_source arkivering_oppgave_datastream:
   connection:
     project_id: flex-prod-af40
     dataset: arkivering_oppgave_datastream
+
+data_source sak_status_metrikk_datastream:
+  type: bigquery
+  connection:
+    project_id: flex-prod-af40
+    dataset: sak_status_metrikk_datastream
