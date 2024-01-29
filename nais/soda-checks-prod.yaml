@@ -28,3 +28,8 @@ data:
     checks for public_vedtaksperiode_tilstand:
       - freshness(tidspunkt) < 12h:
           name: "Det er ikke streamet data fra sykepengesoknad-sak-status-metrikk til til BigQuery siste 12 timer"    
+
+  modia_kontakt_metrikk_datastream.yaml: |    
+    checks for public_henvendelse:
+      - freshness(tidspunkt) < 12h:
+          name: "Det er ikke streamet data fra modia-kontakt-metrikk til til BigQuery siste 12 timer"
