@@ -19,21 +19,18 @@ make run-soda-checks
 
 Hvis noen av sjekkene som verifiser at det er streamet data til BigQuery feiler kan status på Datastreams sjekkes med:
 
-```
+```cmd
 # Sett flex-prod som prosjekt:
-> gcloud config set project flex-prod-af40
+gcloud config set project flex-prod-af40
 
 # List datastreams:
-> gcloud datastream streams list --location=europe-north1 | tr -s ' ' | cut -d ' '  -f1,2
+gcloud datastream streams list --location=europe-north1 | tr -s ' ' | cut -d ' '  -f1,2
+```
+Datastreams skal ha status `RUNNING`.
 
-modia-kontakt-metrikk-datastream RUNNING
-sykepengesoknad-datastream RUNNING
-flexjar-datastream RUNNING
-arkivering-oppgave-datastream RUNNING
-sak-status-metrikk-datastream RUNNING
-spinnsyn-datastream RUNNING
 
-# Restart Cloud SQL Proxy hvis noen av datastreamene har feilet:
+Restart Cloud SQL Proxy hvis noen av datastreamene har status `FAILED`:
+```cmd
 gcloud compute instances reset flex-datastream-cloud-sql-proxy-vm --zone=europe-north1-a
 ```
 
