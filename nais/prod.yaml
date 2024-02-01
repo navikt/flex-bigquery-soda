@@ -1,6 +1,6 @@
 gcp:
   project_id: flex-prod-af40
 cron:
-  schedule: '45 9 * * 1-5'
+  schedule: '40 8 * * 1-5'
 slack:
   channel: "#spøkelser"
