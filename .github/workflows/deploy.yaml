@@ -9,8 +9,6 @@ on:
       - 'LICENSE.md'
       - '.gitignore'
       - 'local/'
-      - 'nais/alerts.yaml'
-      - '.github/workflows/alerts.yaml'
 
 jobs:
   deploy-prod-run-once:

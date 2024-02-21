@@ -6,7 +6,7 @@ metadata:
   name: flex-bigquery-soda{{#if cron.schedule}}{{else}}-run-on-deploy{{/if}}
   namespace: flex
 spec:
-  image: ghcr.io/navikt/nada-soda:2023-06-12-ac65194
+  image: ghcr.io/navikt/nada-soda:2024-02-12-5151dbc
   accessPolicy:
     outbound:
       rules:
