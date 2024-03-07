@@ -1,3 +1,7 @@
 checks for soda-sendt-sykepengesoknad-avstemming-view:
   - row_count = 0:
       name: "Det finnes sykepengesøknader med status SENDT som ikke finnes i sykepengesoknad-arkivering-oppgave"
+
+checks for soda-spinnsyn-datastream-view:
+  - row_count = 0:
+      name: "Det finnes vedtak i spinnsyn-backend som ikke er streamet til BigQuery"
