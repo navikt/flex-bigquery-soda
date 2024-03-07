@@ -8,21 +8,27 @@ data:
     checks for soda-sendt-sykepengesoknad-avstemming-view:
       - row_count = 0:
           name: "Det finnes sykepengesøknader med status SENDT som ikke finnes i sykepengesoknad-arkivering-oppgave"
+
     checks for soda-spinnsyn-datastream-view:
       - row_count = 0:
           name: "Det er data i spinnsyn-backend.vedtak_v2 som ikke er streamet til BigQuery"
+
     checks for soda-sykepengesoknad-datastream-view:
       - row_count = 0:
           name: "Det er data i sykepengesoknad-backend.soknader som ikke er streamet til BigQuery"
+
     checks for soda-modia-kontakt-metrikk-datastream-view:
       - row_count = 0:
           name: "Det er data i modia-kontakt-metrikk.henvendelse som ikke er streamet til BigQuery"
+
     checks for soda-sak-status-metrikk-datastream-view:
       - row_count = 0:
           name: "Det er data i sak-status-metrikk.vedtaksperiode_tilstand som ikke er streamet til BigQuery"
+
     checks for soda-flexjar-datastream-view:
       - row_count = 0:
           name: "Det er data i flexjar-backend.feedback som ikke er streamet til BigQuery"
+
     checks for soda-arkivering-oppgave-datastream-view:
       - row_count = 0:
           name: "Det er data i sykepengesoknad-arkivering-oppgave.oppgavestyring som ikke er streamet til BigQuery"
