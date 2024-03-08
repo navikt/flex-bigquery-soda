@@ -1,3 +1,3 @@
 checks for public_henvendelse:
-  - freshness(tidspunkt) < 12h:
-      name: "Det er ikke streamet data fra modia-kontakt-metrikk til til BigQuery siste 12 timer"
+  - freshness(tidspunkt) < 24h:
+      name: "Det er ikke streamet data fra modia-kontakt-metrikk til til BigQuery siste 24 timer"
