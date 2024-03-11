@@ -1,8 +1,8 @@
-data_source flex_dataset:
+data_source soda_dataset:
   type: bigquery
   connection:
     project_id: flex-prod-af40
-    dataset: flex_dataset
+    dataset: soda_dataset
 
 data_source sykepengesoknad_datastream:
   type: bigquery

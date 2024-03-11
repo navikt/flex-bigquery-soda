@@ -5,11 +5,11 @@ metadata:
   namespace: flex
 data:
   config.yaml: |
-    data_source flex_dataset:
+    data_source soda_dataset:
       type: bigquery
       connection:
         project_id: {{ gcp.project_id }}
-        dataset: flex_dataset
+        dataset: soda_dataset
     data_source sykepengesoknad_datastream:
       type: bigquery
       connection:
@@ -40,5 +40,5 @@ data:
       connection:
         project_id: {{ gcp.project_id }}
         dataset: flexjar_datastream
-    
+
 

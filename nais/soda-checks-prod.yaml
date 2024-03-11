@@ -4,7 +4,7 @@ metadata:
   name: soda-checks
   namespace: flex
 data:
-  flex_dataset.yaml: |
+  soda_dataset.yaml: |
     checks for soda-sendt-sykepengesoknad-avstemming-view:
       - row_count = 0:
           name: "Det finnes sykepengesøknader med status SENDT som ikke finnes i sykepengesoknad-arkivering-oppgave"
