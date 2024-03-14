@@ -1,31 +1,31 @@
 checks for sendt-sykepengesoknad-arkivering-oppgave-avstemming:
   - row_count = 0:
-      name: "Det finnes sykepengesøknader med status SENDT som ikke finnes i sykepengesoknad-arkivering-oppgave"
+      name: "Det finnes sykepengesøknader med status SENDT som ikke finnes i sykepengesoknad-arkivering-oppgave."
 
 checks for spinnsyn-vedtak-datastream-avstemming:
   - row_count = 0:
-      name: "Det finnes data i spinnsyn-backend.vedtak_v2 som ikke er streamet til BigQuery"
+      name: "Det finnes data i spinnsyn-backend.vedtak_v2 som ikke er streamet til BigQuery."
 
 checks for sykepengesoknad-sykepengesoknad-avstemming:
   - row_count = 0:
-      name: "Det finnes data i sykepengesoknad-backend.soknader som ikke er streamet til BigQuery"
+      name: "Det finnes data i sykepengesoknad-backend.soknader som ikke er streamet til BigQuery."
 
 checks for arkivering-oppgave-oppgavestyring-avstemming:
   - row_count = 0:
-      name: "Det finnes data i modia-kontakt-metrikk.henvendelse som ikke er streamet til BigQuery"
+      name: "Det finnes data i modia-kontakt-metrikk.henvendelse som ikke er streamet til BigQuery."
 
 checks for sak-status-metrikk-vedtaksperiode-avstemming:
   - row_count = 0:
-      name: "Det finnes data i sak-status-metrikk.vedtaksperiode_tilstand som ikke er streamet til BigQuery"
+      name: "Det finnes data i sak-status-metrikk.vedtaksperiode_tilstand som ikke er streamet til BigQuery."
 
 checks for modia-kontakt-metrikk-henvendelse-avstemming:
   - row_count = 0:
-      name: "Det finnes data i sykepengesoknad-arkivering-oppgave.oppgavestyring som ikke er streamet til BigQuery"
+      name: "Det finnes data i sykepengesoknad-arkivering-oppgave.oppgavestyring som ikke er streamet til BigQuery."
 
 checks for flexjar-feedback-avstemming:
   - row_count = 0:
-      name: "Det finnes data i flexjar-backend.feedback som ikke er streamet til BigQuery"
+      name: "Det finnes data i flexjar-backend.feedback som ikke er streamet til BigQuery."
 
 checks for manglende-inntektsmelding-morgendagens-prognose:
   - row_count < 40:
-      name: "Det er flere enn 40 planlagte varsler om manglende inntektsmelding i morgen"
+      name: "Det er flere enn 40 planlagte varsler om manglende inntektsmelding i morgen."
