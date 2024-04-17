@@ -66,3 +66,8 @@ data:
     checks for public_feedback:
       - freshness(opprettet) < 24h:
           name: "Det er ikke streamet data fra flexjar-backend til til BigQuery siste 24 timer."
+
+  flex_inntektsmelding_status_datastream.yaml: |
+    checks for public_vedtaksperiode:
+      - freshness(opprettet) < 24h:
+          name: "Det er ikke streamet data fra flex-inntektsmelding-status til til BigQuery siste 24 timer."
