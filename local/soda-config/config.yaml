@@ -40,7 +40,7 @@ data_source flexjar_datastream:
     project_id: flex-prod-af40
     dataset: flexjar_datastream
 
-data_source flex_inntektsmelding_status_datastream:
+data_source inntektsmelding_status_datastream:
   type: bigquery
   connection:
     project_id: flex-prod-af40
