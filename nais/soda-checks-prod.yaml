@@ -38,8 +38,8 @@ data:
           name: "Det finnes data i flex-inntektsmelding-status.vedtaksperiode som ikke er streamet til BigQuery."
 
     checks for manglende-inntektsmelding-morgendagens-prognose:
-      - row_count < 500:
-          name: "Det er flere enn 500 planlagte varsler om manglende inntektsmelding i morgen."
+      - row_count < 750:
+          name: "Det er flere enn 750 planlagte varsler om manglende inntektsmelding i morgen."
 
   sykepengesoknad_datastream.yaml: |
     checks for public_sykepengesoknad:
