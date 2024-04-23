@@ -1,3 +1,0 @@
-checks for public_vedtaksperiode_tilstand:
-  - freshness(tidspunkt) < 24h:
-      name: "Det er ikke streamet data fra sykepengesoknad-sak-status-metrikk til til BigQuery siste 24 timer."
