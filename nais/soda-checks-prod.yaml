@@ -29,14 +29,6 @@ data:
       - row_count = 0:
           name: "Det finnes data i flexjar-backend.feedback som ikke er streamet til BigQuery."
 
-    checks for flex-inntektsmelding-status-avstemming:
-      - row_count = 0:
-          name: "Det finnes data i flex-inntektsmelding-status.vedtaksperiode som ikke er streamet til BigQuery."
-
-    checks for manglende-inntektsmelding-morgendagens-prognose:
-      - row_count < 750:
-          name: "Det er flere enn 750 planlagte varsler om manglende inntektsmelding i morgen."
-
   sykepengesoknad_datastream.yaml: |
     checks for public_sykepengesoknad:
       - freshness(opprettet) < 24h:
@@ -61,8 +53,3 @@ data:
     checks for public_feedback:
       - freshness(opprettet) < 24h:
           name: "Det er ikke streamet data fra flexjar-backend til til BigQuery siste 24 timer."
-
-  inntektsmelding_status_datastream.yaml: |
-    checks for public_vedtaksperiode:
-      - freshness(opprettet) < 24h:
-          name: "Det er ikke streamet data fra flex-inntektsmelding-status til til BigQuery siste 24 timer."
