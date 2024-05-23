@@ -21,11 +21,3 @@ checks for modia-kontakt-metrikk-henvendelse-avstemming:
 checks for flexjar-feedback-avstemming:
   - row_count = 0:
       name: "Det finnes data i flexjar-backend.feedback som ikke er streamet til BigQuery."
-
-checks for flex-inntektsmelding-status-avstemming:
-  - row_count = 0:
-      name: "Det finnes data i flex-inntektsmelding-status.vedtaksperiode som ikke er streamet til BigQuery."
-
-checks for manglende-inntektsmelding-morgendagens-prognose:
-  - row_count < 100:
-      name: "Det er flere enn 100 planlagte varsler om manglende inntektsmelding i morgen."
