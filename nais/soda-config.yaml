@@ -30,10 +30,6 @@ data:
       connection:
         project_id: {{ gcp.project_id }}
         dataset: flexjar_datastream
-    data_source inntektsmelding_status_datastream:
-      type: bigquery
-      connection:
-        project_id: {{ gcp.project_id }}
-        dataset: inntektsmelding_status_datastream
+
 
 
