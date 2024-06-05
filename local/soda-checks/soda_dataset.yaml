@@ -12,10 +12,6 @@ checks for sykepengesoknad-sykepengesoknad-avstemming:
 
 checks for arkivering-oppgave-oppgavestyring-avstemming:
   - row_count = 0:
-      name: "Det finnes data i modia-kontakt-metrikk.henvendelse som ikke er streamet til BigQuery."
-
-checks for modia-kontakt-metrikk-henvendelse-avstemming:
-  - row_count = 0:
       name: "Det finnes data i sykepengesoknad-arkivering-oppgave.oppgavestyring som ikke er streamet til BigQuery."
 
 checks for flexjar-feedback-avstemming:
