@@ -25,6 +25,10 @@ data:
       - row_count = 0:
           name: "Det finnes data i flexjar-backend.feedback som ikke er streamet til BigQuery."
 
+    checks for arkivering_oppgave_venter_pa_bomlo:
+      - row_count < 10:
+          name: "Det er fler enn 2 oppgaver i sykepengesoknad-arkivering-oppgave.oppgavestyring som venter på signal fra Bømlo."
+
   sykepengesoknad_datastream.yaml: |
     checks for public_sykepengesoknad:
       - freshness(opprettet) < 24h:
