@@ -27,7 +27,7 @@ data:
 
     checks for arkivering_oppgave_venter_pa_bomlo:
       - row_count < 10:
-          name: "Det er fler enn 2 oppgaver i sykepengesoknad-arkivering-oppgave.oppgavestyring som venter på signal fra Bømlo."
+          name: "Det er fler enn 10 oppgaver i sykepengesoknad-arkivering-oppgave.oppgavestyring som venter på signal fra Bømlo."
 
   sykepengesoknad_datastream.yaml: |
     checks for public_sykepengesoknad:
