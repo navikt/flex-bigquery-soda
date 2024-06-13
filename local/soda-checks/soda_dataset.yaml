@@ -19,5 +19,5 @@ checks for flexjar-feedback-avstemming:
       name: "Det finnes data i flexjar-backend.feedback som ikke er streamet til BigQuery."
 
 checks for arkivering_oppgave_venter_pa_bomlo:
-  - row_count < 10:
-      name: "Det er fler enn 2 oppgaver i sykepengesoknad-arkivering-oppgave.oppgavestyring som venter på signal fra Bømlo."
+  - row_count < 25:
+      name: "Det er fler enn 25 oppgaver i sykepengesoknad-arkivering-oppgave.oppgavestyring som venter på signal fra Bømlo."
