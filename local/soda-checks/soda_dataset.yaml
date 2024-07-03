@@ -22,6 +22,6 @@ checks for arkivering_oppgave_venter_pa_bomlo:
   - row_count < 25:
       name: "Det er fler enn 25 oppgaver i sykepengesoknad-arkivering-oppgave.oppgavestyring som venter på signal fra Bømlo."
 
-checks for flex-inntektsmelding-status-avstemming:
+checks for flex-inntektsmelding-status-datastream-avstemming:
   - row_count = 0:
       name: "Det finnes data i flex-inntektsmelding-status.vedtaksperiode_behandling_status som ikke er streamet til BigQuery."
