@@ -12,7 +12,7 @@ python = "^3.12"
 soda-core-bigquery = "^3.0.47"
 google-cloud-bigquery-storage = "^2.22.0"
 pyarrow = "^16.1.0"
-setuptools = "^70.0.0"
+setuptools = "^71.0.3"
 
 [build-system]
 requires = ["poetry-core"]
