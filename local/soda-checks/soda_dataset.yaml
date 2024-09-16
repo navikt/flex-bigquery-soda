@@ -23,7 +23,7 @@ checks for arkivering_oppgave_venter_pa_bomlo:
       name: "Det er fler enn 25 oppgaver i sykepengesoknad-arkivering-oppgave.oppgavestyring som venter på signal fra Bømlo."
 
 checks for forsinket_saksbehandling_varslinger_sendt_nylig:
-  - row_count = 3:
+  - row_count = 4:
       name: "Det er varseltyper som ikke er sendt ut nylig fra flex-inntektsmelding-status"
 
 checks for flex-inntektsmelding-status-datastream-avstemming:
