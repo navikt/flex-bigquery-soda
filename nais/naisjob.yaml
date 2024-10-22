@@ -6,7 +6,7 @@ metadata:
   name: flex-bigquery-soda{{#if cron.schedule}}{{else}}-run-on-deploy{{/if}}
   namespace: flex
 spec:
-  image: europe-north1-docker.pkg.dev/nais-management-233d/nada/nada-soda:2024.09.10-09.23-e0d2bcc
+  image: europe-north1-docker.pkg.dev/nais-management-233d/nada/nada-soda:2024.10.11-09.16-455a8d8
   accessPolicy:
     outbound:
       rules:
