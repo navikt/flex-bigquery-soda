@@ -1,20 +1,20 @@
-checks for sendt-sykepengesoknad-arkivering-oppgave-avstemming:
+checks for sendt_sykepengesoknad_arkivering_oppgave_avstemming:
   - row_count = 0:
       name: "Det finnes sykepengesøknader med status SENDT som ikke finnes i sykepengesoknad-arkivering-oppgave."
 
-checks for spinnsyn-vedtak-datastream-avstemming:
+checks for spinnsyn_vedtak_datastream_avstemming:
   - row_count = 0:
       name: "Det finnes data i spinnsyn-backend.vedtak_v2 som ikke er streamet til BigQuery."
 
-checks for sykepengesoknad-sykepengesoknad-avstemming:
+checks for sykepengesoknad_sykepengesoknad_avstemming:
   - row_count = 0:
       name: "Det finnes data i sykepengesoknad-backend.soknader som ikke er streamet til BigQuery."
 
-checks for arkivering-oppgave-oppgavestyring-avstemming:
+checks for arkivering_oppgave_oppgavestyring_avstemming:
   - row_count = 0:
       name: "Det finnes data i sykepengesoknad-arkivering-oppgave.oppgavestyring som ikke er streamet til BigQuery."
 
-checks for flexjar-feedback-avstemming:
+checks for flexjar_feedback_avstemming:
   - row_count = 0:
       name: "Det finnes data i flexjar-backend.feedback som ikke er streamet til BigQuery."
 
@@ -26,7 +26,7 @@ checks for forsinket_saksbehandling_varslinger_sendt_nylig:
   - row_count = 4:
       name: "Det er varseltyper som ikke er sendt ut nylig fra flex-inntektsmelding-status"
 
-checks for flex-inntektsmelding-status-datastream-avstemming:
+checks for flex_inntektsmelding_status_datastream_avstemming:
   - row_count = 0:
       name: "det finnes data i flex-inntektsmelding-status.vedtaksperiode_behandling_status som ikke er streamet til bigquery."
 
