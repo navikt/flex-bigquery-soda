@@ -1,6 +1,5 @@
 .ipynb_checkpoints
 *.ipynb
 .idea
-local/poetry.lock
 .python-version
 .DS_Store
