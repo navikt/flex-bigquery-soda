@@ -28,4 +28,9 @@ checks for forsinket_saksbehandling_varslinger_sendt_nylig:
 
 checks for flex-inntektsmelding-status-datastream-avstemming:
   - row_count = 0:
-      name: "Det finnes data i flex-inntektsmelding-status.vedtaksperiode_behandling_status som ikke er streamet til BigQuery."
+      name: "det finnes data i flex-inntektsmelding-status.vedtaksperiode_behandling_status som ikke er streamet til bigquery."
+
+checks for spinnsyn_utbetaling_spinnsyn_arkivering_avstemming:
+  - row_count = 0:
+      name: "Det finnes utbetalinger i spinnsyn-utbetaling som ikke finnes som vedtak i spinnsyn-arkivering."
+
