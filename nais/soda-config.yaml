@@ -30,6 +30,8 @@ data:
       connection:
         project_id: {{ gcp.project_id }}
         dataset: flexjar_datastream
-
-
-
+    data_source spinnsyn_arkivering_datastream:
+      type: bigquery
+      connection:
+        project_id: {{ gcp.project_id }}
+        dataset: spinnsyn_arkivering_datastream

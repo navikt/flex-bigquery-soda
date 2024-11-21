@@ -56,3 +56,9 @@ data:
     checks for public_feedback:
       - freshness(opprettet) < 24h:
           name: "Det er ikke streamet data fra flexjar-backend til til BigQuery siste 24 timer."
+
+  spinnsyn_arkivering_datastream.yaml: |
+    checks for public_arkivert_vedtak:
+      - freshness(opprettet) < 24h:
+          name: "Det er ikke streamet data fra spinnsyn-arkivering til til BigQuery siste 24 timer."
+

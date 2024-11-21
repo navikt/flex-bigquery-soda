@@ -28,3 +28,8 @@ data_source flexjar_datastream:
     project_id: flex-prod-af40
     dataset: flexjar_datastream
 
+data_source spinnsyn_arkivering_datastream:
+  type: bigquery
+  connection:
+    project_id: flex-prod-af40
+    dataset: spinnsyn_arkivering_datastream
