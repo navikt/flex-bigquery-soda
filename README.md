@@ -6,12 +6,21 @@ Bygger på [nada-soda](https://github.com/navikt/nada-soda) og er tungt inspirer
 
 ## Utvikling
 
-I mappen [local/](local/) ligger det filer som kan brukes til å kjøre Soda-sjekker fra lokal maskin. Sjekkene som ligger her er ikke de samme som kjøres av naisjobben, og er i all hovedak ment for testing av tester i forbindelse med utvikling.
+I mappen [local/](local/) ligger det filer som kan brukes til å kjøre Soda-sjekker fra lokal maskin. Sjekkene som ligger her er ikke de samme som kjøres av naisjobben, og er i all hovedsak ment for kjøring av tester i forbindelse med utvikling.
 
-Testene kjøres med:
+
+Før første gang testene kjøres lokalt må poetry konfigureres:
 
 ```sh
-cd local
+# Sett python versjon:
+poetry env use 3.12
+cd local/
+poetry install
+```
+
+Testene kan deretter kjøres med:
+
+```sh
 make run-soda-checks
 ```
 
