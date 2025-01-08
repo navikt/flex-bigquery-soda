@@ -8,7 +8,7 @@ package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.12"
-soda-core-bigquery = "^3.4.3"
+soda-core-bigquery = "^3.4.4"
 google-cloud-bigquery-storage = "^2.27.0"
 pyarrow = "^18.1.0"
 setuptools = "^75.6.0"
