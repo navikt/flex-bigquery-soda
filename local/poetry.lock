@@ -518,26 +518,6 @@ files = [
 all = ["flake8 (>=7.1.1)", "mypy (>=1.11.2)", "pytest (>=8.3.2)", "ruff (>=0.6.2)"]
 
 [[package]]
-name = "importlib-metadata"
-version = "6.11.0"
-description = "Read metadata from Python packages"
-optional = false
-python-versions = ">=3.8"
-groups = ["main"]
-files = [
-    {file = "importlib_metadata-6.11.0-py3-none-any.whl", hash = "sha256:f0afba6205ad8f8947c7d338b5342d5db2afbfd82f9cbef7879a9539cc12eb9b"},
-    {file = "importlib_metadata-6.11.0.tar.gz", hash = "sha256:1231cf92d825c9e03cfc4da076a16de6422c863558229ea0b22b675657463443"},
-]
-
-[package.dependencies]
-zipp = ">=0.5"
-
-[package.extras]
-docs = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "rst.linker (>=1.9)", "sphinx (<7.2.5)", "sphinx (>=3.5)", "sphinx-lint"]
-perf = ["ipython"]
-testing = ["flufl.flake8", "importlib-resources (>=1.3) ; python_version < \"3.9\"", "packaging", "pyfakefs", "pytest (>=6)", "pytest-black (>=0.3.7) ; platform_python_implementation != \"PyPy\"", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-mypy (>=0.9.1) ; platform_python_implementation != \"PyPy\"", "pytest-perf (>=0.9.2)", "pytest-ruff"]
-
-[[package]]
 name = "inflect"
 version = "7.5.0"
 description = "Correctly generate plurals, singular nouns, ordinals, indefinite articles"
@@ -653,56 +633,38 @@ files = [
 
 [[package]]
 name = "opentelemetry-api"
-version = "1.22.0"
+version = "1.16.0"
 description = "OpenTelemetry Python API"
 optional = false
 python-versions = ">=3.7"
 groups = ["main"]
 files = [
-    {file = "opentelemetry_api-1.22.0-py3-none-any.whl", hash = "sha256:43621514301a7e9f5d06dd8013a1b450f30c2e9372b8e30aaeb4562abf2ce034"},
-    {file = "opentelemetry_api-1.22.0.tar.gz", hash = "sha256:15ae4ca925ecf9cfdfb7a709250846fbb08072260fca08ade78056c502b86bed"},
+    {file = "opentelemetry_api-1.16.0-py3-none-any.whl", hash = "sha256:79e8f0cf88dbdd36b6abf175d2092af1efcaa2e71552d0d2b3b181a9707bf4bc"},
+    {file = "opentelemetry_api-1.16.0.tar.gz", hash = "sha256:4b0e895a3b1f5e1908043ebe492d33e33f9ccdbe6d02d3994c2f8721a63ddddb"},
 ]
 
 [package.dependencies]
 deprecated = ">=1.2.6"
-importlib-metadata = ">=6.0,<7.0"
-
-[[package]]
-name = "opentelemetry-exporter-otlp-proto-common"
-version = "1.22.0"
-description = "OpenTelemetry Protobuf encoding"
-optional = false
-python-versions = ">=3.7"
-groups = ["main"]
-files = [
-    {file = "opentelemetry_exporter_otlp_proto_common-1.22.0-py3-none-any.whl", hash = "sha256:3f2538bec5312587f8676c332b3747f54c89fe6364803a807e217af4603201fa"},
-    {file = "opentelemetry_exporter_otlp_proto_common-1.22.0.tar.gz", hash = "sha256:71ae2f81bc6d6fe408d06388826edc8933759b2ca3a97d24054507dc7cfce52d"},
-]
-
-[package.dependencies]
-backoff = {version = ">=1.10.0,<3.0.0", markers = "python_version >= \"3.7\""}
-opentelemetry-proto = "1.22.0"
+setuptools = ">=16.0"
 
 [[package]]
 name = "opentelemetry-exporter-otlp-proto-http"
-version = "1.22.0"
+version = "1.16.0"
 description = "OpenTelemetry Collector Protobuf over HTTP Exporter"
 optional = false
 python-versions = ">=3.7"
 groups = ["main"]
 files = [
-    {file = "opentelemetry_exporter_otlp_proto_http-1.22.0-py3-none-any.whl", hash = "sha256:e002e842190af45b91dc55a97789d0b98e4308c88d886b16049ee90e17a4d396"},
-    {file = "opentelemetry_exporter_otlp_proto_http-1.22.0.tar.gz", hash = "sha256:79ed108981ec68d5f7985355bca32003c2f3a5be1534a96d62d5861b758a82f4"},
+    {file = "opentelemetry_exporter_otlp_proto_http-1.16.0-py3-none-any.whl", hash = "sha256:f27cabd0e071fb8cc258bcaaad51b0c228fef1156bf6e6b1f9ae738881d9bf51"},
+    {file = "opentelemetry_exporter_otlp_proto_http-1.16.0.tar.gz", hash = "sha256:d7f14ae8b41b3606ee3e4ab12d42cb48610d8419f1d8b92c7d3ff5813c7a10d7"},
 ]
 
 [package.dependencies]
 backoff = {version = ">=1.10.0,<3.0.0", markers = "python_version >= \"3.7\""}
-deprecated = ">=1.2.6"
 googleapis-common-protos = ">=1.52,<2.0"
 opentelemetry-api = ">=1.15,<2.0"
-opentelemetry-exporter-otlp-proto-common = "1.22.0"
-opentelemetry-proto = "1.22.0"
-opentelemetry-sdk = ">=1.22.0,<1.23.0"
+opentelemetry-proto = "1.16.0"
+opentelemetry-sdk = ">=1.16.0,<1.17.0"
 requests = ">=2.7,<3.0"
 
 [package.extras]
@@ -710,14 +672,14 @@ test = ["responses (==0.22.0)"]
 
 [[package]]
 name = "opentelemetry-proto"
-version = "1.22.0"
+version = "1.16.0"
 description = "OpenTelemetry Python Proto"
 optional = false
 python-versions = ">=3.7"
 groups = ["main"]
 files = [
-    {file = "opentelemetry_proto-1.22.0-py3-none-any.whl", hash = "sha256:ce7188d22c75b6d0fe53e7fb58501613d0feade5139538e79dedd9420610fa0c"},
-    {file = "opentelemetry_proto-1.22.0.tar.gz", hash = "sha256:9ec29169286029f17ca34ec1f3455802ffb90131642d2f545ece9a63e8f69003"},
+    {file = "opentelemetry_proto-1.16.0-py3-none-any.whl", hash = "sha256:160326d300faf43c3f72c4a916516ee5b63289ceb9828294b698ef943697cbd5"},
+    {file = "opentelemetry_proto-1.16.0.tar.gz", hash = "sha256:e58832dfec64621972a9836f8ae163fb3063946eb02bdf43fae0f76f8cf46d0a"},
 ]
 
 [package.dependencies]
@@ -725,31 +687,32 @@ protobuf = ">=3.19,<5.0"
 
 [[package]]
 name = "opentelemetry-sdk"
-version = "1.22.0"
+version = "1.16.0"
 description = "OpenTelemetry Python SDK"
 optional = false
 python-versions = ">=3.7"
 groups = ["main"]
 files = [
-    {file = "opentelemetry_sdk-1.22.0-py3-none-any.whl", hash = "sha256:a730555713d7c8931657612a88a141e3a4fe6eb5523d9e2d5a8b1e673d76efa6"},
-    {file = "opentelemetry_sdk-1.22.0.tar.gz", hash = "sha256:45267ac1f38a431fc2eb5d6e0c0d83afc0b78de57ac345488aa58c28c17991d0"},
+    {file = "opentelemetry_sdk-1.16.0-py3-none-any.whl", hash = "sha256:15f03915eec4839f885a5e6ed959cde59b8690c8c012d07c95b4b138c98dc43f"},
+    {file = "opentelemetry_sdk-1.16.0.tar.gz", hash = "sha256:4d3bb91e9e209dbeea773b5565d901da4f76a29bf9dbc1c9500be3cabb239a4e"},
 ]
 
 [package.dependencies]
-opentelemetry-api = "1.22.0"
-opentelemetry-semantic-conventions = "0.43b0"
+opentelemetry-api = "1.16.0"
+opentelemetry-semantic-conventions = "0.37b0"
+setuptools = ">=16.0"
 typing-extensions = ">=3.7.4"
 
 [[package]]
 name = "opentelemetry-semantic-conventions"
-version = "0.43b0"
+version = "0.37b0"
 description = "OpenTelemetry Semantic Conventions"
 optional = false
 python-versions = ">=3.7"
 groups = ["main"]
 files = [
-    {file = "opentelemetry_semantic_conventions-0.43b0-py3-none-any.whl", hash = "sha256:291284d7c1bf15fdaddf309b3bd6d3b7ce12a253cec6d27144439819a15d8445"},
-    {file = "opentelemetry_semantic_conventions-0.43b0.tar.gz", hash = "sha256:b9576fb890df479626fa624e88dde42d3d60b8b6c8ae1152ad157a8b97358635"},
+    {file = "opentelemetry_semantic_conventions-0.37b0-py3-none-any.whl", hash = "sha256:462982278a42dab01f68641cd89f8460fe1f93e87c68a012a76fb426dcdba5ee"},
+    {file = "opentelemetry_semantic_conventions-0.37b0.tar.gz", hash = "sha256:087ce2e248e42f3ffe4d9fa2303111de72bb93baa06a0f4655980bc1557c4228"},
 ]
 
 [[package]]
@@ -1182,14 +1145,14 @@ files = [
 
 [[package]]
 name = "soda-core"
-version = "3.4.4"
+version = "3.5.0"
 description = "Soda Core library & CLI"
 optional = false
 python-versions = ">=3.7"
 groups = ["main"]
 files = [
-    {file = "soda_core-3.4.4-py3-none-any.whl", hash = "sha256:a54a0ae3a76a2c51ecb3be81a8d336bbe032dddacf977aab14ec11790cd6aa5c"},
-    {file = "soda_core-3.4.4.tar.gz", hash = "sha256:753a76e94aac63b6e67548bcb8a0f5bfbe036bb09390aac4e6654ed9c926aba3"},
+    {file = "soda_core-3.5.0-py3-none-any.whl", hash = "sha256:c45fafa237eb7dab00c22d573af0a2371e3d7035f4e0ecb67942addf488f7390"},
+    {file = "soda_core-3.5.0.tar.gz", hash = "sha256:06b308e33d09aec59aa8a3a497784fbd3588d88e0077976c21c646266f5f8ee8"},
 ]
 
 [package.dependencies]
@@ -1197,9 +1160,8 @@ antlr4-python3-runtime = ">=4.11.1,<4.12.0"
 click = ">=8.0,<9.0"
 inflect = ">=7.0,<8.0"
 Jinja2 = ">=2.11,<4.0"
-markupsafe = ">=2.0.1,<=2.1.2"
-opentelemetry-api = ">=1.16.0,<1.23.0"
-opentelemetry-exporter-otlp-proto-http = ">=1.16.0,<1.23.0"
+opentelemetry-api = ">=1.16.0,<1.17.0"
+opentelemetry-exporter-otlp-proto-http = ">=1.16.0,<2.0.0"
 pydantic = ">=2.0.0,<3.0.0"
 requests = ">=2.30,<3.0"
 "ruamel.yaml" = ">=0.17.0,<0.18.0"
@@ -1207,19 +1169,19 @@ sqlparse = ">=0.4,<1.0"
 
 [[package]]
 name = "soda-core-bigquery"
-version = "3.4.4"
+version = "3.5.0"
 description = ""
 optional = false
 python-versions = "*"
 groups = ["main"]
 files = [
-    {file = "soda_core_bigquery-3.4.4-py3-none-any.whl", hash = "sha256:45cd2d4320a78d93e4a381df29a76bed89c1a2f90f8aa66e74beda6313d92168"},
-    {file = "soda_core_bigquery-3.4.4.tar.gz", hash = "sha256:c95ecd7b9b91e7d13aa7c8e906f8755dca16e58fc69141ad2069b13d8b108c06"},
+    {file = "soda_core_bigquery-3.5.0-py3-none-any.whl", hash = "sha256:0fb873a40cd7b07716161f087794282b7e7774628de566d17f1099c36dc37047"},
+    {file = "soda_core_bigquery-3.5.0.tar.gz", hash = "sha256:4e4f23ddbccfbcec877452909f6512e5b339cbb33ad9ab29d1362a7925dcf357"},
 ]
 
 [package.dependencies]
 google-cloud-bigquery = ">=2.25.0,<4.0"
-soda-core = "3.4.4"
+soda-core = "3.5.0"
 
 [[package]]
 name = "sqlparse"
@@ -1375,27 +1337,7 @@ files = [
     {file = "wrapt-1.17.2.tar.gz", hash = "sha256:41388e9d4d1522446fe79d3213196bd9e3b301a336965b9e27ca2788ebd122f3"},
 ]
 
-[[package]]
-name = "zipp"
-version = "3.21.0"
-description = "Backport of pathlib-compatible object wrapper for zip files"
-optional = false
-python-versions = ">=3.9"
-groups = ["main"]
-files = [
-    {file = "zipp-3.21.0-py3-none-any.whl", hash = "sha256:ac1bbe05fd2991f160ebce24ffbac5f6d11d83dc90891255885223d42b3cd931"},
-    {file = "zipp-3.21.0.tar.gz", hash = "sha256:2c9958f6430a2040341a52eb608ed6dd93ef4392e02ffe219417c1b28b5dd1f4"},
-]
-
-[package.extras]
-check = ["pytest-checkdocs (>=2.4)", "pytest-ruff (>=0.2.1) ; sys_platform != \"cygwin\""]
-cover = ["pytest-cov"]
-doc = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "rst.linker (>=1.9)", "sphinx (>=3.5)", "sphinx-lint"]
-enabler = ["pytest-enabler (>=2.2)"]
-test = ["big-O", "importlib-resources ; python_version < \"3.9\"", "jaraco.functools", "jaraco.itertools", "jaraco.test", "more-itertools", "pytest (>=6,!=8.1.*)", "pytest-ignore-flaky"]
-type = ["pytest-mypy"]
-
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "7f60aa0e991113c90bd65cf349c135f2faae8b671677362c9c7faae68142bb91"
+content-hash = "9d5784751bb5c35e5aa4690b77aa470e54cd212199fbb19c6ec76a898be2cbd4"
