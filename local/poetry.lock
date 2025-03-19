@@ -1156,14 +1156,14 @@ files = [
 
 [[package]]
 name = "soda-core"
-version = "3.5.0"
+version = "3.5.1"
 description = "Soda Core library & CLI"
 optional = false
 python-versions = ">=3.7"
 groups = ["main"]
 files = [
-    {file = "soda_core-3.5.0-py3-none-any.whl", hash = "sha256:c45fafa237eb7dab00c22d573af0a2371e3d7035f4e0ecb67942addf488f7390"},
-    {file = "soda_core-3.5.0.tar.gz", hash = "sha256:06b308e33d09aec59aa8a3a497784fbd3588d88e0077976c21c646266f5f8ee8"},
+    {file = "soda_core-3.5.1-py3-none-any.whl", hash = "sha256:2dc43a0ef40cea03486351213d005eade7b97a60f10de6f4c55f73b7efc5be90"},
+    {file = "soda_core-3.5.1.tar.gz", hash = "sha256:8ab2666bf60950ebcc7df3b87c6a66356e3a93a44c19f3f5c90e860f0fccc755"},
 ]
 
 [package.dependencies]
@@ -1171,7 +1171,7 @@ antlr4-python3-runtime = ">=4.11.1,<4.12.0"
 click = ">=8.0,<9.0"
 inflect = ">=7.0,<8.0"
 Jinja2 = ">=2.11,<4.0"
-opentelemetry-api = ">=1.16.0,<1.17.0"
+opentelemetry-api = ">=1.16.0,<2.0.0"
 opentelemetry-exporter-otlp-proto-http = ">=1.16.0,<2.0.0"
 pydantic = ">=2.0.0,<3.0.0"
 requests = ">=2.30,<3.0"
@@ -1180,19 +1180,19 @@ sqlparse = ">=0.4,<1.0"
 
 [[package]]
 name = "soda-core-bigquery"
-version = "3.5.0"
+version = "3.5.1"
 description = ""
 optional = false
 python-versions = "*"
 groups = ["main"]
 files = [
-    {file = "soda_core_bigquery-3.5.0-py3-none-any.whl", hash = "sha256:0fb873a40cd7b07716161f087794282b7e7774628de566d17f1099c36dc37047"},
-    {file = "soda_core_bigquery-3.5.0.tar.gz", hash = "sha256:4e4f23ddbccfbcec877452909f6512e5b339cbb33ad9ab29d1362a7925dcf357"},
+    {file = "soda_core_bigquery-3.5.1-py3-none-any.whl", hash = "sha256:d406b980030518cb554bf35098c283d6e1cc59a440bec8ee00cb5f589a29ca54"},
+    {file = "soda_core_bigquery-3.5.1.tar.gz", hash = "sha256:14608713adf6bc31f4af00f5d5fa6539d7a7653bf50cfc3bf53a4d068fa9fffa"},
 ]
 
 [package.dependencies]
 google-cloud-bigquery = ">=2.25.0,<4.0"
-soda-core = "3.5.0"
+soda-core = "3.5.1"
 
 [[package]]
 name = "sqlparse"
@@ -1351,4 +1351,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "e6bb39a503ae081b8ce04633ed1176ebdfb645f737282530c3920110ec76c03a"
+content-hash = "412054b97083b08bdf943bb9b939a98e52e6ddbaff62e6967371de4b7501a3c0"
