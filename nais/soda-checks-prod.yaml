@@ -31,7 +31,7 @@ data:
 
     checks for forsinket_saksbehandling_varslinger_sendt_nylig:
       - row_count = 4:
-          name: "Det er varseltyper som ikke er sendt ut nylig fra flex-inntektsmelding-status"
+          name: "Det er varseltyper som ikke er sendt ut nylig fra flex-inntektsmelding-status."
     
     checks for flex_inntektsmelding_status_datastream_avstemming:
       - row_count = 0:
@@ -40,6 +40,18 @@ data:
     checks for spinnsyn_utbetaling_spinnsyn_arkivering_avstemming: 
       - row_count = 0: 
           name: "Det finnes utbetalinger i spinnsyn-utbetaling som ikke finnes som vedtak i spinnsyn-arkivering." 
+   
+    checks for frisk_til_arbeid_vedtak_overlapp:
+      - row_count = 0:
+          name: "Det finnes FriskTilArbeid vedtak som overlapper med tidligere vedtak."
+
+    checks for frisk_til_arbeid_vedtak_arbeidssokerperiode:
+      - row_count = 0:
+          name: "Det finnes FriskTilArbeid hvor bruker ikke er registert i arbeidsøkerregisteret."
+
+    checks for frisk_til_arbeid_vedtak_ubehandlet:
+      - row_count = 0:
+          name: "Det finnes FriskTilArbeid vedtak som har hatt status NY lengre enn 24 timer."
 
   sykepengesoknad_datastream.yaml: |
     checks for public_sykepengesoknad:
