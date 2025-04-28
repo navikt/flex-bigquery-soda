@@ -10,7 +10,7 @@ package-mode = false
 python = "^3.12"
 soda-core-bigquery = "^3.5.1"
 google-cloud-bigquery-storage = "^2.29.1"
-pyarrow = "^19.0.1"
+pyarrow = "^20.0.0"
 setuptools = "^76.1.0"
 
 [build-system]
