@@ -1,5 +1,4 @@
 .ipynb_checkpoints
 *.ipynb
 .idea
-.python-version
 .DS_Store
