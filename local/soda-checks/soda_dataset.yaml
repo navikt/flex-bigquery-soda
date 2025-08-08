@@ -46,3 +46,7 @@ checks for frisk_til_arbeid_vedtak_arbeidssokerperiode:
 checks for frisk_til_arbeid_vedtak_ubehandlet:
   - row_count = 0:
       name: "Det finnes FriskTilArbeid vedtak som har hatt status NY lengre enn 24 timer."
+
+checks for flex_inntektsmelding_status_forelagte_opplysninger_forsinket:
+  - row_count = 0:
+      name: "Noen forelagte opplysninger er forsinket, dette må sjekkes manuelt."
