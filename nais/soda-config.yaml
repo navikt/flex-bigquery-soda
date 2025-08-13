@@ -18,8 +18,8 @@ data:
     data_source flex_sykmeldinger_backend_datastream:
       type: bigquery
       connection:
-      project_id: {{ gcp.project_id }}
-      dataset: flex_sykmeldinger_backend_datastream
+        project_id: {{ gcp.project_id }}
+        dataset: flex_sykmeldinger_backend_datastream
     data_source spinnsyn_datastream:
       type: bigquery
       connection:
