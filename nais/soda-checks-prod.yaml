@@ -68,7 +68,7 @@ data:
           name: "Det er ikke streamet data fra sykepengesoknad-backend til til BigQuery siste 24 timer."
 
   flex_sykmeldinger_backend_datastream.yaml: |
-    checks for public_sykmeldinger:
+    checks for public_sykmelding:
       - freshness(opprettet) < 24h:
           name: "Det er ikke streamet data fra flex-sykmeldinger-backend til til BigQuery siste 24 timer."
 
