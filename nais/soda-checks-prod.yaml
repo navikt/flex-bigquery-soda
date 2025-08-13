@@ -56,6 +56,10 @@ data:
     checks for flex_inntektsmelding_status_forelagte_opplysninger_forsinket:
       - row_count = 0:
           name: "Noen forelagte opplysninger er forsinket, dette må sjekkes manuelt."
+      
+    checks for sykmeldinger_korrelerer_med_tsm:
+      - row_count = 0:
+          name: "Det finnes sykmeldinghendelser som ikke er korrelert med TSM."
     
 
   sykepengesoknad_datastream.yaml: |
@@ -63,7 +67,7 @@ data:
       - freshness(opprettet) < 24h:
           name: "Det er ikke streamet data fra sykepengesoknad-backend til til BigQuery siste 24 timer."
 
-  flex_sykmeldinger_datastream.yaml: |
+  flex_sykmeldinger_backend_datastream.yaml: |
     checks for public_sykmeldinger:
       - freshness(opprettet) < 24h:
           name: "Det er ikke streamet data fra flex-sykmeldinger-backend til til BigQuery siste 24 timer."
