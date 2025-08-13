@@ -42,7 +42,6 @@ checks for frisk_til_arbeid_vedtak_arbeidssokerperiode:
   - row_count = 0:
       name: "Det finnes FriskTilArbeid hvor bruker ikke er registert i arbeidsøkerregisteret."
 
-
 checks for frisk_til_arbeid_vedtak_ubehandlet:
   - row_count = 0:
       name: "Det finnes FriskTilArbeid vedtak som har hatt status NY lengre enn 24 timer."
@@ -50,3 +49,7 @@ checks for frisk_til_arbeid_vedtak_ubehandlet:
 checks for flex_inntektsmelding_status_forelagte_opplysninger_forsinket:
   - row_count = 0:
       name: "Noen forelagte opplysninger er forsinket, dette må sjekkes manuelt."
+
+checks for sykmeldinger_korrelerer_med_tsm:
+  - row_count = 0:
+      name: "Det finnes sykmeldinghendelser som ikke er korrelert med TSM."
