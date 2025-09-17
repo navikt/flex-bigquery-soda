@@ -1040,6 +1040,21 @@ files = [
 six = ">=1.5"
 
 [[package]]
+name = "python-dotenv"
+version = "1.1.1"
+description = "Read key-value pairs from a .env file and set them as environment variables"
+optional = false
+python-versions = ">=3.9"
+groups = ["main"]
+files = [
+    {file = "python_dotenv-1.1.1-py3-none-any.whl", hash = "sha256:31f23644fe2602f88ff55e1f5c79ba497e01224ee7737937930c448e4d0e24dc"},
+    {file = "python_dotenv-1.1.1.tar.gz", hash = "sha256:a8a6399716257f45be6a007360200409fce5cda2661e3dec71d23dc15f6189ab"},
+]
+
+[package.extras]
+cli = ["click (>=5.0)"]
+
+[[package]]
 name = "requests"
 version = "2.32.3"
 description = "Python HTTP for Humans."
@@ -1187,14 +1202,14 @@ files = [
 
 [[package]]
 name = "soda-core"
-version = "3.5.1"
+version = "3.5.5"
 description = "Soda Core library & CLI"
 optional = false
 python-versions = ">=3.7"
 groups = ["main"]
 files = [
-    {file = "soda_core-3.5.1-py3-none-any.whl", hash = "sha256:2dc43a0ef40cea03486351213d005eade7b97a60f10de6f4c55f73b7efc5be90"},
-    {file = "soda_core-3.5.1.tar.gz", hash = "sha256:8ab2666bf60950ebcc7df3b87c6a66356e3a93a44c19f3f5c90e860f0fccc755"},
+    {file = "soda_core-3.5.5-py3-none-any.whl", hash = "sha256:92c0f10995a0e14dca772fb2bdb1da277a04a82fdc3b52fc396eff61f69051d7"},
+    {file = "soda_core-3.5.5.tar.gz", hash = "sha256:972eb3e98ede29fbd0f968efd51c0840abe362f587b262f31073f651118cfc7b"},
 ]
 
 [package.dependencies]
@@ -1205,25 +1220,26 @@ Jinja2 = ">=2.11,<4.0"
 opentelemetry-api = ">=1.16.0,<2.0.0"
 opentelemetry-exporter-otlp-proto-http = ">=1.16.0,<2.0.0"
 pydantic = ">=2.0.0,<3.0.0"
+python-dotenv = ">=1.0,<2.0"
 requests = ">=2.30,<3.0"
 "ruamel.yaml" = ">=0.17.0,<0.18.0"
 sqlparse = ">=0.4,<1.0"
 
 [[package]]
 name = "soda-core-bigquery"
-version = "3.5.1"
+version = "3.5.5"
 description = ""
 optional = false
 python-versions = "*"
 groups = ["main"]
 files = [
-    {file = "soda_core_bigquery-3.5.1-py3-none-any.whl", hash = "sha256:d406b980030518cb554bf35098c283d6e1cc59a440bec8ee00cb5f589a29ca54"},
-    {file = "soda_core_bigquery-3.5.1.tar.gz", hash = "sha256:14608713adf6bc31f4af00f5d5fa6539d7a7653bf50cfc3bf53a4d068fa9fffa"},
+    {file = "soda_core_bigquery-3.5.5-py3-none-any.whl", hash = "sha256:a94e0ec8e0b37ef83de52ac7c33eb2d2149ef15ec9abecacf44ff7ffe2b00c11"},
+    {file = "soda_core_bigquery-3.5.5.tar.gz", hash = "sha256:2fb38ab665f17d8ce9996ce019700af6330490515136199a6948039c25ea0b19"},
 ]
 
 [package.dependencies]
 google-cloud-bigquery = ">=2.25.0,<4.0"
-soda-core = "3.5.1"
+soda-core = "3.5.5"
 
 [[package]]
 name = "sqlparse"
@@ -1402,4 +1418,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "412054b97083b08bdf943bb9b939a98e52e6ddbaff62e6967371de4b7501a3c0"
+content-hash = "2dce5a045084424ae52a84f34a4ca932239f122e00d3e155fdc1960e3fa8a97e"
