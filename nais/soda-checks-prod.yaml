@@ -60,7 +60,10 @@ data:
     checks for sykmeldinger_korrelerer_med_tsm:
       - row_count = 0:
           name: "Det finnes sykmeldinghendelser som ikke er korrelert med TSM."
-    
+          
+    checks for sykepengesoknad_aktivering_forsinket:
+      - row_count = 0:
+          name: "Det finnes sykepengesøknader som burde vært aktivert"
 
   sykepengesoknad_datastream.yaml: |
     checks for public_sykepengesoknad:
