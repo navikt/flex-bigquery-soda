@@ -57,9 +57,9 @@ data:
       - row_count = 0:
           name: "Noen forelagte opplysninger er forsinket, dette må sjekkes manuelt."
       
-    checks for sykmeldinghendelser_korrelerer_med_tsm:
+    checks for sykmeldinghendelser_korrelerer_med_syfosmregister:
       - row_count = 0:
-          name: "Det finnes sykmeldinghendelser som ikke er korrelert med TSM."
+          name: "Det finnes sykmeldinghendelser som ikke korrelerer med syfosmregister."
           
     checks for sykepengesoknad_aktivering_forsinket:
       - row_count = 0:
