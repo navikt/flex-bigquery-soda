@@ -50,6 +50,6 @@ checks for flex_inntektsmelding_status_forelagte_opplysninger_forsinket:
   - row_count = 0:
       name: "Noen forelagte opplysninger er forsinket, dette må sjekkes manuelt."
 
-checks for sykmeldinger_korrelerer_med_tsm:
+checks for sykmeldinghendelser_korrelerer_med_syfosmregister:
   - row_count = 0:
-      name: "Det finnes sykmeldinghendelser som ikke er korrelert med TSM."
+      name: "Det finnes sykmeldinghendelser som ikke er korrelert med syfosmregister."
