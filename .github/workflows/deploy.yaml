@@ -22,6 +22,7 @@ jobs:
           CLUSTER: prod-gcp
           RESOURCE: nais/soda-config.yaml,nais/soda-checks-prod.yaml,nais/naisjob.yaml
           VARS: nais/prod-run-once.yaml
+          VAR: git_sha=${{ github.sha }}
 
   deploy-prod-run-scheduled:
     needs: [deploy-prod-run-once]
@@ -35,3 +36,4 @@ jobs:
           CLUSTER: prod-gcp
           RESOURCE: nais/soda-config.yaml,nais/soda-checks-prod.yaml,nais/naisjob.yaml
           VARS: nais/prod.yaml
+          VAR: git_sha=${{ github.sha }}
