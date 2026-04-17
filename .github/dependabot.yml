@@ -20,3 +20,10 @@ updates:
       interval: daily
       time: "03:00"
     open-pull-requests-limit: 5
+
+  - package-ecosystem: docker
+    directory: "/nais"
+    schedule:
+      interval: daily
+      time: "03:00"
+    open-pull-requests-limit: 5
