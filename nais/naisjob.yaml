@@ -21,6 +21,8 @@ spec:
       value: "{{ slack.channel }}"
     - name: NOTIFY_OK_SCAN_STATUS
       value: "true"
+    - name: GIT_SHA
+      value: "{{ git_sha }}"
   {{#if cron.schedule}}
   schedule: {{ cron.schedule }}
   {{/if}}
