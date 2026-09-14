@@ -53,3 +53,11 @@ checks for flex_inntektsmelding_status_forelagte_opplysninger_forsinket:
 checks for sykmeldinghendelser_korrelerer_med_syfosmregister:
   - row_count = 0:
       name: "Det finnes sykmeldinghendelser som ikke er korrelert med syfosmregister."
+
+checks for sykepengesoknad_vedtaksperiode_oppdatert_siste_dogn:
+  - row_count > 0:
+      name: "sykepngesoknad-backend har ikke oppdatert vedtaksperiode-statuser fra tbd.sis de siste 24 timene. Sjekk at det faktisk konsumeres meldinger."
+
+checks for innteksmelding_status_vedtaksperiode_oppdatert_siste_dogn:
+  - row_count > 0:
+      name: "flex-inntektsmelding-status har ikke oppdatert vedtaksperiode-statuser fra tbd.sis de siste 24 timene. Sjekk at det faktisk konsumeres meldinger."
