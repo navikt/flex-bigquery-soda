@@ -9,6 +9,10 @@ Bygger på [nada-soda](https://github.com/navikt/nada-soda) og er tungt inspirer
 Prosjektet bruker Soda V4 Data Contracts, med én YAML-fil per BigQuery-tabell.
 Produksjon kjører med `nada-soda-contracts`-imaget i [nais/naisjob.yaml](nais/naisjob.yaml).
 Kontraktene ligger som separate filer i ConfigMap-en [nais/soda-checks-prod.yaml](nais/soda-checks-prod.yaml).
+ConfigMap-en heter `soda-checks-v4`, slik at jobben ikke gjenbruker en gammel
+`soda-checks`-mount med Soda v3-filer ved deploy. En feil om manglende `dataset`
+i for eksempel `arkivering_oppgave_datastream.yaml` betyr at runneren leser en
+gammel v3-fil; v4-kontrakten heter `public_oppgavestyring.yaml`.
 
 I mappen [local/](local/) ligger en egen Python-runner og kontrakter for lokal kjøring mot samme BigQuery-prosjekt.
 Kontraktene i [local/soda-checks/](local/soda-checks/) skal speile produksjonskontraktene, inkludert terskler og navn.

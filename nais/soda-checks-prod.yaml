@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: soda-checks
+  name: soda-checks-v4
   namespace: flex
 data:
   sendt_sykepengesoknad_arkivering_oppgave_avstemming.yaml: |

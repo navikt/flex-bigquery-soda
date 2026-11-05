@@ -16,7 +16,7 @@ spec:
     - name: SODA_CONFIG
       value: /var/run/configmaps/soda-config/config.yaml
     - name: SODA_CHECKS_FOLDER
-      value: /var/run/configmaps/soda-checks
+      value: /var/run/configmaps/soda-checks-v4
     - name: SLACK_CHANNEL
       value: "{{ slack.channel }}"
     - name: NOTIFY_OK_SCAN_STATUS
@@ -31,7 +31,7 @@ spec:
   backoffLimit: 1
   concurrencyPolicy: Forbid
   filesFrom:
-    - configmap: soda-checks
+    - configmap: soda-checks-v4
     - configmap: soda-config
   gcp:
     permissions:
