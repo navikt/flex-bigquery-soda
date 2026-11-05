@@ -1,0 +1,7 @@
+dataset: flex/flex-prod-af40/soda_dataset/spinnsyn_utbetaling_spinnsyn_arkivering_avstemming
+columns: []
+checks:
+  - row_count:
+      name: "Det finnes utbetalinger i spinnsyn-utbetaling som ikke finnes som vedtak i spinnsyn-arkivering."
+      threshold:
+        must_be: 0

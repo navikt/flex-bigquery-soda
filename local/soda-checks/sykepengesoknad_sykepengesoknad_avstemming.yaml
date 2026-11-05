@@ -1,0 +1,7 @@
+dataset: flex/flex-prod-af40/soda_dataset/sykepengesoknad_sykepengesoknad_avstemming
+columns: []
+checks:
+  - row_count:
+      name: "Det finnes data i sykepengesoknad-backend.soknader som ikke er streamet til BigQuery."
+      threshold:
+        must_be: 0

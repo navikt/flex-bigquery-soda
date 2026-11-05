@@ -1,0 +1,9 @@
+dataset: flex/flex-prod-af40/sykepengesoknad_datastream/public_sykepengesoknad
+columns: []
+checks:
+  - freshness:
+      name: "Det er ikke streamet data fra sykepengesoknad-backend til til BigQuery siste 24 timer."
+      column: opprettet
+      threshold:
+        unit: hour
+        must_be_less_than: 24

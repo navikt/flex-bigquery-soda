@@ -1,0 +1,7 @@
+dataset: flex/flex-prod-af40/soda_dataset/frisk_til_arbeid_vedtak_arbeidssokerperiode
+columns: []
+checks:
+  - row_count:
+      name: "Det finnes FriskTilArbeid hvor bruker ikke er registert i arbeidsøkerregisteret."
+      threshold:
+        must_be: 0

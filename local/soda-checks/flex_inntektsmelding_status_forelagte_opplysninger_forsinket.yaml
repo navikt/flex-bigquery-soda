@@ -1,0 +1,7 @@
+dataset: flex/flex-prod-af40/soda_dataset/flex_inntektsmelding_status_forelagte_opplysninger_forsinket
+columns: []
+checks:
+  - row_count:
+      name: "Noen forelagte opplysninger er forsinket, dette må sjekkes manuelt."
+      threshold:
+        must_be: 0

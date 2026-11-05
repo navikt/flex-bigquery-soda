@@ -1,20 +1,17 @@
-import os
-from soda.scan import Scan
-
+import logging
 import warnings
+from pathlib import Path
+
+from soda_core.contracts import verify_contract_locally
 
 warnings.filterwarnings("ignore", message='Your application has authenticated using end user credentials', category=Warning)
+logging.basicConfig(level=logging.INFO)
 
-for file in os.listdir("soda-checks"):
-    scan = Scan()
-    scan.add_configuration_yaml_file(file_path="soda-config/config.yaml")
-    dataset = file.split(".")[0]
-    scan.set_data_source_name(dataset)
-    scan.add_sodacl_yaml_file(f"soda-checks/{file}")
-    scan.execute()
+local_dir = Path(__file__).resolve().parent
 
-    scan_result = scan.get_scan_results()
-    messages = [log["message"] for log in scan_result["logs"]]
-
-    for message in messages:
-        print(message)
+for contract in sorted((local_dir / "soda-checks").glob("*.yaml")):
+    logging.info("Running contract %s", contract.name)
+    verify_contract_locally(
+        contract_file_path=str(contract),
+        data_source_file_path=str(local_dir / "soda-config/config.yaml"),
+    )

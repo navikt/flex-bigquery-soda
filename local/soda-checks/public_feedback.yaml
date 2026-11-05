@@ -1,0 +1,9 @@
+dataset: flex/flex-prod-af40/flexjar_datastream/public_feedback
+columns: []
+checks:
+  - freshness:
+      name: "Det er ikke streamet data fra flexjar-backend til til BigQuery siste 24 timer."
+      column: opprettet
+      threshold:
+        unit: hour
+        must_be_less_than: 24

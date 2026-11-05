@@ -1,0 +1,7 @@
+dataset: flex/flex-prod-af40/soda_dataset/frisk_til_arbeid_vedtak_overlapp
+columns: []
+checks:
+  - row_count:
+      name: "Det finnes FriskTilArbeid vedtak som overlapper med tidligere vedtak."
+      threshold:
+        must_be: 0
