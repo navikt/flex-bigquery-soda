@@ -1,0 +1,7 @@
+dataset: flex/flex-prod-af40/soda_dataset/arkivering_oppgave_venter_pa_bomlo
+columns: []
+checks:
+  - row_count:
+      name: "Det er fler enn 150 oppgaver i sykepengesoknad-arkivering-oppgave.oppgavestyring som venter på signal fra Bømlo."
+      threshold:
+        must_be_less_than_or_equal: 150

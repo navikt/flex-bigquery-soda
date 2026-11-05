@@ -1,0 +1,7 @@
+dataset: flex/flex-prod-af40/soda_dataset/sykepengesoknad_vedtaksperiode_oppdatert_siste_dogn
+columns: []
+checks:
+  - row_count:
+      name: "sykepngesoknad-backend har ikke oppdatert vedtaksperiode-statuser fra tbd.sis de siste 24 timene. Sjekk at det faktisk konsumeres meldinger."
+      threshold:
+        must_be_greater_than: 0

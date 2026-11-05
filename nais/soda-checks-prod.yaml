@@ -4,98 +4,191 @@ metadata:
   name: soda-checks
   namespace: flex
 data:
-  soda_dataset.yaml: |
-    checks for sendt_sykepengesoknad_arkivering_oppgave_avstemming:
-      - row_count = 0:
+  sendt_sykepengesoknad_arkivering_oppgave_avstemming.yaml: |
+    dataset: flex/{{ gcp.project_id }}/soda_dataset/sendt_sykepengesoknad_arkivering_oppgave_avstemming
+    columns: []
+    checks:
+      - row_count:
           name: "Det finnes sykepengesøknader med status SENDT som ikke finnes i sykepengesoknad-arkivering-oppgave."
-
-    checks for spinnsyn_vedtak_datastream_avstemming:
-      - row_count = 0:
+          threshold:
+            must_be: 0
+  spinnsyn_vedtak_datastream_avstemming.yaml: |
+    dataset: flex/{{ gcp.project_id }}/soda_dataset/spinnsyn_vedtak_datastream_avstemming
+    columns: []
+    checks:
+      - row_count:
           name: "Det finnes data i spinnsyn-backend.vedtak_v2 som ikke er streamet til BigQuery."
-
-    checks for sykepengesoknad_sykepengesoknad_avstemming:
-      - row_count = 0:
+          threshold:
+            must_be: 0
+  sykepengesoknad_sykepengesoknad_avstemming.yaml: |
+    dataset: flex/{{ gcp.project_id }}/soda_dataset/sykepengesoknad_sykepengesoknad_avstemming
+    columns: []
+    checks:
+      - row_count:
           name: "Det finnes data i sykepengesoknad-backend.soknader som ikke er streamet til BigQuery."
-
-    checks for arkivering_oppgave_oppgavestyring_avstemming:
-      - row_count = 0:
+          threshold:
+            must_be: 0
+  arkivering_oppgave_oppgavestyring_avstemming.yaml: |
+    dataset: flex/{{ gcp.project_id }}/soda_dataset/arkivering_oppgave_oppgavestyring_avstemming
+    columns: []
+    checks:
+      - row_count:
           name: "Det finnes data i sykepengesoknad-arkivering-oppgave.oppgavestyring som ikke er streamet til BigQuery."
-
-    checks for flexjar_feedback_avstemming:
-      - row_count = 0:
+          threshold:
+            must_be: 0
+  flexjar_feedback_avstemming.yaml: |
+    dataset: flex/{{ gcp.project_id }}/soda_dataset/flexjar_feedback_avstemming
+    columns: []
+    checks:
+      - row_count:
           name: "Det finnes data i flexjar-backend.feedback som ikke er streamet til BigQuery."
-
-    checks for arkivering_oppgave_venter_pa_bomlo:
-      - row_count <= 150:
+          threshold:
+            must_be: 0
+  arkivering_oppgave_venter_pa_bomlo.yaml: |
+    dataset: flex/{{ gcp.project_id }}/soda_dataset/arkivering_oppgave_venter_pa_bomlo
+    columns: []
+    checks:
+      - row_count:
           name: "Det er fler enn 150 oppgaver i sykepengesoknad-arkivering-oppgave.oppgavestyring som venter på signal fra Bømlo."
-
-    checks for forsinket_saksbehandling_varslinger_sendt_nylig:
-      - row_count = 4:
+          threshold:
+            must_be_less_than_or_equal: 150
+  forsinket_saksbehandling_varslinger_sendt_nylig.yaml: |
+    dataset: flex/{{ gcp.project_id }}/soda_dataset/forsinket_saksbehandling_varslinger_sendt_nylig
+    columns: []
+    checks:
+      - row_count:
           name: "Det er varseltyper som ikke er sendt ut nylig fra flex-inntektsmelding-status."
-    
-    checks for flex_inntektsmelding_status_datastream_avstemming:
-      - row_count = 0:
+          threshold:
+            must_be: 4
+  flex_inntektsmelding_status_datastream_avstemming.yaml: |
+    dataset: flex/{{ gcp.project_id }}/soda_dataset/flex_inntektsmelding_status_datastream_avstemming
+    columns: []
+    checks:
+      - row_count:
           name: "Det finnes data i flex-inntektsmelding-status.vedtaksperiode_behandling_status som ikke er streamet til BigQuery."
-
-    checks for spinnsyn_utbetaling_spinnsyn_arkivering_avstemming: 
-      - row_count = 0: 
-          name: "Det finnes utbetalinger i spinnsyn-utbetaling som ikke finnes som vedtak i spinnsyn-arkivering." 
-   
-    checks for frisk_til_arbeid_vedtak_overlapp:
-      - row_count = 0:
+          threshold:
+            must_be: 0
+  spinnsyn_utbetaling_spinnsyn_arkivering_avstemming.yaml: |
+    dataset: flex/{{ gcp.project_id }}/soda_dataset/spinnsyn_utbetaling_spinnsyn_arkivering_avstemming
+    columns: []
+    checks:
+      - row_count:
+          name: "Det finnes utbetalinger i spinnsyn-utbetaling som ikke finnes som vedtak i spinnsyn-arkivering."
+          threshold:
+            must_be: 0
+  frisk_til_arbeid_vedtak_overlapp.yaml: |
+    dataset: flex/{{ gcp.project_id }}/soda_dataset/frisk_til_arbeid_vedtak_overlapp
+    columns: []
+    checks:
+      - row_count:
           name: "Det finnes FriskTilArbeid vedtak som overlapper med tidligere vedtak."
-
-    checks for frisk_til_arbeid_vedtak_arbeidssokerperiode:
-      - row_count = 0:
+          threshold:
+            must_be: 0
+  frisk_til_arbeid_vedtak_arbeidssokerperiode.yaml: |
+    dataset: flex/{{ gcp.project_id }}/soda_dataset/frisk_til_arbeid_vedtak_arbeidssokerperiode
+    columns: []
+    checks:
+      - row_count:
           name: "Det finnes FriskTilArbeid hvor bruker ikke er registert i arbeidsøkerregisteret."
-
-    checks for frisk_til_arbeid_vedtak_ubehandlet:
-      - row_count = 0:
+          threshold:
+            must_be: 0
+  frisk_til_arbeid_vedtak_ubehandlet.yaml: |
+    dataset: flex/{{ gcp.project_id }}/soda_dataset/frisk_til_arbeid_vedtak_ubehandlet
+    columns: []
+    checks:
+      - row_count:
           name: "Det finnes FriskTilArbeid vedtak som har hatt status NY lengre enn 24 timer."
-          
-    checks for flex_inntektsmelding_status_forelagte_opplysninger_forsinket:
-      - row_count = 0:
+          threshold:
+            must_be: 0
+  flex_inntektsmelding_status_forelagte_opplysninger_forsinket.yaml: |
+    dataset: flex/{{ gcp.project_id }}/soda_dataset/flex_inntektsmelding_status_forelagte_opplysninger_forsinket
+    columns: []
+    checks:
+      - row_count:
           name: "Noen forelagte opplysninger er forsinket, dette må sjekkes manuelt."
-      
-    checks for sykepengesoknad_aktivering_forsinket:
-      - row_count = 0:
+          threshold:
+            must_be: 0
+  sykepengesoknad_aktivering_forsinket.yaml: |
+    dataset: flex/{{ gcp.project_id }}/soda_dataset/sykepengesoknad_aktivering_forsinket
+    columns: []
+    checks:
+      - row_count:
           name: "Det finnes sykepengesøknader som burde vært aktivert"
-
-    checks for sykepengesoknad_vedtaksperiode_oppdatert_siste_dogn:
-        - row_count > 0:
-              name: "sykepngesoknad-backend har ikke oppdatert vedtaksperiode-statuser fra tbd.sis de siste 24 timene. Sjekk at det faktisk konsumeres meldinger."
-    
-    checks for innteksmelding_status_vedtaksperiode_oppdatert_siste_dogn:
-        - row_count > 0:
-              name: "flex-inntektsmelding-status har ikke oppdatert vedtaksperiode-statuser fra tbd.sis de siste 24 timene. Sjekk at det faktisk konsumeres meldinger."
-
-  sykepengesoknad_datastream.yaml: |
-    checks for public_sykepengesoknad:
-      - freshness(opprettet) < 24h:
+          threshold:
+            must_be: 0
+  sykepengesoknad_vedtaksperiode_oppdatert_siste_dogn.yaml: |
+    dataset: flex/{{ gcp.project_id }}/soda_dataset/sykepengesoknad_vedtaksperiode_oppdatert_siste_dogn
+    columns: []
+    checks:
+      - row_count:
+          name: "sykepngesoknad-backend har ikke oppdatert vedtaksperiode-statuser fra tbd.sis de siste 24 timene. Sjekk at det faktisk konsumeres meldinger."
+          threshold:
+            must_be_greater_than: 0
+  innteksmelding_status_vedtaksperiode_oppdatert_siste_dogn.yaml: |
+    dataset: flex/{{ gcp.project_id }}/soda_dataset/innteksmelding_status_vedtaksperiode_oppdatert_siste_dogn
+    columns: []
+    checks:
+      - row_count:
+          name: "flex-inntektsmelding-status har ikke oppdatert vedtaksperiode-statuser fra tbd.sis de siste 24 timene. Sjekk at det faktisk konsumeres meldinger."
+          threshold:
+            must_be_greater_than: 0
+  public_sykepengesoknad.yaml: |
+    dataset: flex/{{ gcp.project_id }}/sykepengesoknad_datastream/public_sykepengesoknad
+    columns: []
+    checks:
+      - freshness:
           name: "Det er ikke streamet data fra sykepengesoknad-backend til til BigQuery siste 24 timer."
-
-  flex_sykmeldinger_backend_datastream.yaml: |
-    checks for public_sykmelding:
-      - freshness(opprettet) < 24h:
+          column: opprettet
+          threshold:
+            unit: hour
+            must_be_less_than: 24
+  public_sykmelding.yaml: |
+    dataset: flex/{{ gcp.project_id }}/flex_sykmeldinger_backend_datastream/public_sykmelding
+    columns: []
+    checks:
+      - freshness:
           name: "Det er ikke streamet data fra flex-sykmeldinger-backend til til BigQuery siste 24 timer."
-
-  spinnsyn_datastream.yaml: |
-    checks for public_vedtak_v2:
-      - freshness(opprettet) < 24h:
+          column: opprettet
+          threshold:
+            unit: hour
+            must_be_less_than: 24
+  public_vedtak_v2.yaml: |
+    dataset: flex/{{ gcp.project_id }}/spinnsyn_datastream/public_vedtak_v2
+    columns: []
+    checks:
+      - freshness:
           name: "Det er ikke streamet data fra spinnsyn-backend til til BigQuery siste 24 timer."
-
-  arkivering_oppgave_datastream.yaml: |
-    checks for public_oppgavestyring:
-      - freshness(opprettet) < 24h:
+          column: opprettet
+          threshold:
+            unit: hour
+            must_be_less_than: 24
+  public_oppgavestyring.yaml: |
+    dataset: flex/{{ gcp.project_id }}/arkivering_oppgave_datastream/public_oppgavestyring
+    columns: []
+    checks:
+      - freshness:
           name: "Det er ikke streamet data fra sykepengesoknad-arkivering-oppgave til til BigQuery siste 24 timer."
-
-  flexjar_datastream.yaml: |
-    checks for public_feedback:
-      - freshness(opprettet) < 24h:
+          column: opprettet
+          threshold:
+            unit: hour
+            must_be_less_than: 24
+  public_feedback.yaml: |
+    dataset: flex/{{ gcp.project_id }}/flexjar_datastream/public_feedback
+    columns: []
+    checks:
+      - freshness:
           name: "Det er ikke streamet data fra flexjar-backend til til BigQuery siste 24 timer."
-
-  spinnsyn_arkivering_datastream.yaml: |
-    checks for public_arkivert_vedtak:
-      - freshness(opprettet) < 24h:
+          column: opprettet
+          threshold:
+            unit: hour
+            must_be_less_than: 24
+  public_arkivert_vedtak.yaml: |
+    dataset: flex/{{ gcp.project_id }}/spinnsyn_arkivering_datastream/public_arkivert_vedtak
+    columns: []
+    checks:
+      - freshness:
           name: "Det er ikke streamet data fra spinnsyn-arkivering til til BigQuery siste 24 timer."
-
+          column: opprettet
+          threshold:
+            unit: hour
+            must_be_less_than: 24

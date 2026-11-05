@@ -1,0 +1,7 @@
+dataset: flex/flex-prod-af40/soda_dataset/forsinket_saksbehandling_varslinger_sendt_nylig
+columns: []
+checks:
+  - row_count:
+      name: "Det er varseltyper som ikke er sendt ut nylig fra flex-inntektsmelding-status."
+      threshold:
+        must_be: 4

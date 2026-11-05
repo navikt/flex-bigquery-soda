@@ -1,0 +1,7 @@
+dataset: flex/flex-prod-af40/soda_dataset/sendt_sykepengesoknad_arkivering_oppgave_avstemming
+columns: []
+checks:
+  - row_count:
+      name: "Det finnes sykepengesøknader med status SENDT som ikke finnes i sykepengesoknad-arkivering-oppgave."
+      threshold:
+        must_be: 0

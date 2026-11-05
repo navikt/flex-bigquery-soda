@@ -2,19 +2,26 @@
 
 Bygger på [nada-soda](https://github.com/navikt/nada-soda) og er tungt inspirert av, og har stålet mye fra, [helse-styringsinfo-kvalitetssjekk](https://github.com/navikt/helse-styringsinfo-kvalitetssjekk).
 
-[Naisjob](https://doc.nais.io/naisjob/) for periodisk kjøring av [Soda](https://www.soda.io/)-sjekker på BigQuery-tabeller. Varsler på Slack-kanalen `#flex-dev` ved avvik.
+[Naisjob](https://doc.nais.io/naisjob/) for periodisk kjøring av [Soda](https://www.soda.io/)-sjekker på BigQuery-tabeller. Varsler på Slack ved avvik.
 
 ## Utvikling
 
-I mappen [local/](local/) ligger det filer som kan brukes til å kjøre Soda-sjekker fra lokal maskin. Sjekkene som ligger her er ikke de samme som kjøres av naisjobben, og er i all hovedsak ment for kjøring av tester i forbindelse med utvikling.
+Prosjektet bruker Soda V4 Data Contracts, med én YAML-fil per BigQuery-tabell.
+Produksjon kjører med `nada-soda-contracts`-imaget i [nais/naisjob.yaml](nais/naisjob.yaml).
+Kontraktene ligger som separate filer i ConfigMap-en [nais/soda-checks-prod.yaml](nais/soda-checks-prod.yaml).
 
+I mappen [local/](local/) ligger en egen Python-runner og kontrakter for lokal kjøring mot samme BigQuery-prosjekt.
+Kontraktene i [local/soda-checks/](local/soda-checks/) skal speile produksjonskontraktene, inkludert terskler og navn.
+Ved endringer må begge oppdateres. Datasource-navnet er `flex`, og hver kontrakt angir
+`dataset: flex/<gcp-project-id>/<bq-dataset>/<table>`.
+Lokal kjøring bruker Application Default Credentials og publiserer ikke resultater eller Slack-varsler.
+Den lokale Soda-versjonen er låst til samme versjon som produksjonsimaget; oppdater begge sammen.
 
 Før første gang testene kjøres lokalt må poetry konfigureres:
 
 ```sh
-# Sett python versjon:
-poetry env use 3.12
 cd local/
+poetry env use 3.15
 poetry install
 ```
 
@@ -49,4 +56,5 @@ gcloud compute instances reset flex-datastream-cloud-sql-proxy-vm --zone=europe-
 
 ## Ressurser
 
-- [List of SodaCL metrics and checks](https://docs.soda.io/soda-cl/metrics-and-checks.html#list-of-sodacl-metrics-and-checks)
+- [NADA: Kvalitetssikre data med Soda](https://docs.knada.io/dataprodukter/kvalitetssikring/)
+- [Soda Data Contract Language](https://docs.soda.io/reference/contract-language-reference)

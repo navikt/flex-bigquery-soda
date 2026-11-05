@@ -1,0 +1,9 @@
+dataset: flex/flex-prod-af40/spinnsyn_arkivering_datastream/public_arkivert_vedtak
+columns: []
+checks:
+  - freshness:
+      name: "Det er ikke streamet data fra spinnsyn-arkivering til til BigQuery siste 24 timer."
+      column: opprettet
+      threshold:
+        unit: hour
+        must_be_less_than: 24

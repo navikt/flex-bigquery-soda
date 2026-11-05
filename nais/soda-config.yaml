@@ -5,38 +5,8 @@ metadata:
   namespace: flex
 data:
   config.yaml: |
-    data_source soda_dataset:
-      type: bigquery
-      connection:
-        project_id: {{ gcp.project_id }}
-        dataset: soda_dataset
-    data_source sykepengesoknad_datastream:
-      type: bigquery
-      connection:
-        project_id: {{ gcp.project_id }}
-        dataset: sykepengesoknad_datastream
-    data_source flex_sykmeldinger_backend_datastream:
-      type: bigquery
-      connection:
-        project_id: {{ gcp.project_id }}
-        dataset: flex_sykmeldinger_backend_datastream
-    data_source spinnsyn_datastream:
-      type: bigquery
-      connection:
-        project_id: {{ gcp.project_id }}
-        dataset: spinnsyn_datastream
-    data_source arkivering_oppgave_datastream:
-      type: bigquery
-      connection:
-        project_id: {{ gcp.project_id }}
-        dataset: arkivering_oppgave_datastream
-    data_source flexjar_datastream:
-      type: bigquery
-      connection:
-        project_id: {{ gcp.project_id }}
-        dataset: flexjar_datastream
-    data_source spinnsyn_arkivering_datastream:
-      type: bigquery
-      connection:
-        project_id: {{ gcp.project_id }}
-        dataset: spinnsyn_arkivering_datastream
+    type: bigquery
+    name: flex
+    connection:
+      use_context_auth: true
+      project_id: {{ gcp.project_id }}
