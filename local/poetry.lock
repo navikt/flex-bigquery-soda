@@ -1287,30 +1287,30 @@ files = [
 
 [[package]]
 name = "soda-bigquery"
-version = "4.28.0"
+version = "4.29.0"
 description = "Soda BigQuery V4"
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "soda_bigquery-4.28.0-py3-none-any.whl", hash = "sha256:765eb8b24357d9c24eec8129f22e4ab98f4d17481ad58184e4cad978dff4d7cd"},
-    {file = "soda_bigquery-4.28.0.tar.gz", hash = "sha256:5ff9bd3ad43e2c1db47709920c673fac51b693dddafb617436cd72e19d30ea79"},
+    {file = "soda_bigquery-4.29.0-py3-none-any.whl", hash = "sha256:ee1a3e52b64b306dc18136c6cf9af64eb3ab689221203913c4696fc202b1bd00"},
+    {file = "soda_bigquery-4.29.0.tar.gz", hash = "sha256:efc271a81a74def961b413cf169e45eaa2d4d83e1dcfd4e1f031a7f41b1e8907"},
 ]
 
 [package.dependencies]
 google-cloud-bigquery = ">=2.25.0"
-soda-core = "4.28.0"
+soda-core = "4.29.0"
 
 [[package]]
 name = "soda-core"
-version = "4.28.0"
+version = "4.29.0"
 description = "Soda core library & CLI"
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "soda_core-4.28.0-py3-none-any.whl", hash = "sha256:e6eabf6d110364d86ad8ea733bc25e2cfd8077963ac743afa03a7582287afb22"},
-    {file = "soda_core-4.28.0.tar.gz", hash = "sha256:a5d472fe2cd617a64eb758dd65442863ef9e455af95e18c1b0da2deef44471d7"},
+    {file = "soda_core-4.29.0-py3-none-any.whl", hash = "sha256:6426fb3d5f57c449b775db081ab95d0a269c460d048dc64af9a5b537718896f0"},
+    {file = "soda_core-4.29.0.tar.gz", hash = "sha256:2bc42c1de38f748f751652c5e9b1a40ae50e8572ba7046faeaa308e7d0dd5d7d"},
 ]
 
 [package.dependencies]
@@ -1445,4 +1445,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.15"
-content-hash = "cb9ee868035558ba268da41f4770c5c603eefbdca7cb0aa89fec926029f76eb6"
+content-hash = "31234270afa70e4a2b2cca133d50426c3199370c785e5f27670de533d5e56caa"
